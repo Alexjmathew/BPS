@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+    background-color: black;
+    color: green;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 1s, color 1s;
+}
+
+.container {
+    background-color: transparent;
+    transition: background-color 1s;
+    border: 2px solid green;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    transition: color 1s;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 20px 0;
+    transition: color 1s;
+}
+
+.btn {
+    background-color: green;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.btn:hover {
+    background-color: black;
+    color: green;
+}
+
+.container:hover {
+    background-color: green;
+}

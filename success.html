@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex J Mathew</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #00ff00;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            
+        }
+
+        #container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .animation {
+            animation: neon 1.5s infinite alternate;
+        }
+
+        @keyframes neon {
+            from {
+                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+            }
+            to {
+                text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+            }
+        }
+
+        .project-details {
+            margin-top: 30px;
+        }
+
+        .project-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .project-link {
+            color: #00ff00;
+            text-decoration: none;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        #photo {
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img id="photo" src="photo.jpg" alt="Your Photo" width="150" height="150">
+        <h1 class="animation" onclick="playMusic()">Alex J Mathew</h1>
+        <p></p>
+
+        <div class="project-details">
+            <div class="project-title"></div>
+            <p>
+                Check out my project on GitHub:
+                <a href="https://github.com/Alexjmathew" class="project-link" target="_blank">GitHub Link</a>
+            </p>
+        </div>
+
+        <audio id="music" controls>
+            <source src="leo.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <script>
+            function playMusic() {
+                var audio = document.getElementById("music");
+                audio.play();
+            }
+        </script>
+    </div>
+</body>
+</html>
